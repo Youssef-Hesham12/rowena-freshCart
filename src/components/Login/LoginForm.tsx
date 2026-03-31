@@ -33,11 +33,12 @@ export default function LoginForm() {
   });
 
   async function loginSubmit(data: LoginDataType) {
-    const res = await signIn("credentials", { redirect: false, ...data });
+    const res = await signIn("credentials", {  callbackUrl: '/',
+      redirect: true, ...data });
 
     if (res?.ok) {
       toast.success("Login successful");
-      router.replace("/");
+      router.push("/");
     } else {
       toast.error(res?.error);
     }
