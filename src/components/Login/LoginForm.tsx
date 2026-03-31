@@ -38,7 +38,7 @@ export default function LoginForm() {
 
     if (res?.ok) {
       toast.success("Login successful");
-      router.push("/");
+      router.replace("/");
     } else {
       toast.error(res?.error);
     }
