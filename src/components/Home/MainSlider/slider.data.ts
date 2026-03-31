@@ -1,0 +1,25 @@
+import { SliderItem } from "./slider.types";
+
+export const sliderArr: SliderItem[] = [
+  {
+    h2: "Fresh Products Delivered to your Door",
+    p: "Get 20% off your first order",
+    btn1: "Shop Now",
+    btn2: "View Deals",
+    btn1Color: "text-green-500",
+  },
+  {
+    h2: "Premium Quality Guaranteed",
+    p: "Fresh from farm to your table",
+    btn1: "Shop Now",
+    btn2: "Learn More",
+    btn1Color: "text-blue-500",
+  },
+  {
+    h2: "Fast & Free Delivery",
+    p: "Same day delivery available",
+    btn1: "Order Now",
+    btn2: "Delivery Info",
+    btn1Color: "text-purple-500",
+  },
+];
