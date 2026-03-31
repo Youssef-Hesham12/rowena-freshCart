@@ -62,13 +62,13 @@ export const authOptions: NextAuthOptions = {
           name: user.name,
         };
       }
-      if (trigger === "update" && session) {
-        token.user = {
-          ...token.user,
-          name: session.name,
-          email: session.email,
-        };
-      }
+      // if (trigger === "update" && session) {
+      //   token.user = {
+      //     ...token.user,
+      //     name: session.name,
+      //     email: session.email,
+      //   };
+      // }
       return token;
     },
     session({ session, token }) {
