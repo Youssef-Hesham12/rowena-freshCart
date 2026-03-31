@@ -11,8 +11,7 @@ interface checkoutProps {
   searchParams: Promise<{ id: string }>;
 }
 export default async function Checkout({ searchParams }: checkoutProps) {
-  const session = await getServerSession(authOptions)
-    if(!session) redirect('/login');
+  
   const { id } = await searchParams;
   const cartItems: CartType = await getUserCart();
   const userAddresses: UserAddressesType = await getUserAddresses();
