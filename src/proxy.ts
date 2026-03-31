@@ -7,9 +7,7 @@ const authRoutes = ["/login", "/register"];
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const token = await getToken({
-    req: request,
-    secret: process.env.NEXTAUTH_SECRET,
-    secureCookie: process.env.NODE_ENV === "production",
+    req: request
   });
 
   if (!token && protectedRoutes.some((route) => pathname.startsWith(route))) {
