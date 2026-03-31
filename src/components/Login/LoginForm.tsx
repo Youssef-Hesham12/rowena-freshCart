@@ -33,17 +33,16 @@ export default function LoginForm() {
   });
 
   async function loginSubmit(data: LoginDataType) {
-    const res = await signIn("credentials", {  callbackUrl: '/',
-      redirect: true, ...data });
+    const res = await signIn("credentials", { redirect: false, ...data });
 
     if (res?.ok) {
       toast.success("Login successful");
-      router.replace("/");
+      router.push("/");
     } else {
       toast.error(res?.error);
     }
   }
-// ي
+
   return (
     <div className="w-full">
       <div className="bg-white rounded-[16px] shadow-xl p-8 lg:p-12">
