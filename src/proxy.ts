@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 const protectedRoutes = ["/cart", "/checkout", "/allorders", "/profile"];
 const authRoutes = ["/login", "/register"];
-
+// بر
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const token = await getToken({
