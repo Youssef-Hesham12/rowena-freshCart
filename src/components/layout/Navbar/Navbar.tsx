@@ -53,6 +53,7 @@ export default function Navbar() {
   }
 
   useEffect(() => {
+    console.log("helllllllllllllo cart")
     getUserCart().then((res) => {
       if (res?.numOfCartItems > 0) {
         updateCart(res.data.products,res.numOfCartItems);
@@ -67,7 +68,7 @@ export default function Navbar() {
         updateWishlist([]);
       }
     });
-  }, []);
+  }, [status]);
 
   return (
     <>
